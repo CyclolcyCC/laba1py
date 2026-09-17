@@ -8,9 +8,9 @@ import warnings
 
 warnings.filterwarnings('ignore')
 # iter = 3 5 10 20
-x_0 = 1.35 #27175
-x_f = 0.9
-step = 0.002
+x_f = 1.35
+x_0 = 1.272 #0.9
+step = 0.001
 
 deg = np.pi / 180
 
@@ -34,7 +34,7 @@ def draw_func():
 
     x, of, df, ddf = [], [], [], []
 
-    for i in np.arange(x_f, x_0, step):
+    for i in np.arange(x_0, x_f, step):
         x.append(i)
         of.append(original(i))
         df.append(derivative(i))
